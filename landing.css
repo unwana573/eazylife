@@ -1,0 +1,599 @@
+* { 
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+} 
+.img {
+    margin-top: -5%;
+    background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(marvel-logo-wallpaper.jpg);
+    background-size: cover;
+    height: 55rem;
+    justify-content: center;
+    align-items: center;
+    animation: change 99000ms infinite ease-in-out;
+}
+    
+/* IST NAV BAR  */
+nav {
+    align-items: center;
+    margin-top: .5rem;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 45%;
+    text-align: center;
+    padding-top: 5%; position: absolute;
+}
+    
+nav ul {
+    flex-shrink: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem; 
+    font-size: 1.7rem;
+    flex: 1 1px solid;
+    padding-left: 25%; 
+}
+ 
+ /*! LOGO ON IST NAV BAR */
+.logo {
+    font-size: 3rem;
+    color: rgb(6, 56, 6);
+    font-weight: bold;
+}
+
+.logo span {
+    color: orangered;
+}
+
+nav a {
+    color: white;
+}
+
+.active  {
+    color: orangered;
+}
+
+nav.active, a:hover {
+    color: orangered;
+}
+
+/* TEXT ON NAV BAR */
+.text {
+    padding-top: 25%;
+    padding-left: 2%;
+    color: white;
+    font-size: x-large;
+    text-align: center;   
+}
+
+.text span {
+    color: orangered;
+}
+
+/* ! 2ND NAV BAR */
+.main {
+    height: 12%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    background: rgb(6, 56, 6);
+    position: absolute;
+    top: 44.5rem;
+}
+
+.main ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; 
+    font-size: 1.7rem;
+    height: 2.8rem;
+    align-items: center;
+} 
+  
+.log {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    padding-left: 2rem;
+    padding-right: 46%;
+}
+
+.log span {
+    color: orangered;
+}
+
+.main a {
+    color: white;
+}
+
+.active  {
+    color: orangered;
+}
+
+.main.active, a:hover {
+    color: orangered;
+}
+
+.sub1 {
+    display: none;
+}
+
+.main ul li:hover .sub1 {
+    display: block;
+    position: absolute;
+    background: rgb(6, 56, 6);
+
+    margin-left: -15px;
+  
+}
+
+.main ul li:hover .sub1 ul {
+    display: block;
+    margin: 10px;
+    height: 100%;
+}
+
+.main ul li:hover .sub1 ul li  {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: none;
+    text-align: left;
+}
+
+.main ul li:hover .sub1 ul li:last-child  {
+    border-bottom: none;
+}
+
+.fa-angle-right {
+   float: right;
+}
+
+.sub2 {
+    display: none;
+}
+
+.hover-me:hover .sub2 { 
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+}
+    
+.overlay  {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.main .pan  {
+    display: none;
+
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: orangered;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* ! STYLING FOR MOVIE POSTER, SEARCH BAR   */
+.container {
+    width: 50px;
+    height: 40px;
+    border-radius: 50px;
+    background: transparent;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+    top: 65px;
+    margin-left: 2%;
+    /* margin-right: 20%; */
+    background: rgb(6, 56, 6);
+}
+
+.container .icon {
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.container .icon .search {
+    font-size: 21px;
+    cursor: pointer;
+    color: #444;
+
+}
+
+.container.active {
+    width: 400px;
+   height: 20%;
+}
+  
+.container .input {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -25%;
+}
+
+input {
+    width: 1000px;    
+    height: 35px;    
+    border-color: transparent;
+    background: rgb(6, 56, 6);
+}
+.container .input .clear {
+    position: absolute;
+    right: 15%;
+    top: 29px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size:  20px;
+}
+
+
+.palace {
+    background-color: black;
+    height: 2000px;
+    margin-top: -5%;
+}
+.place img {
+    border-radius: 5%;
+}
+.place ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   padding-top: 5%; 
+}
+.place  {
+    color: #fff;
+}
+
+.fa-star {
+    color: goldenrod;
+}
+
+.fa-star-half-stroke    { 
+    color: goldenrod;
+}    
+
+.place li {   
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    background: #272727;
+}
+
+img.active, img:hover {
+    transition: 0.2s;
+    opacity: 0.5;
+    cursor: pointer;   
+}
+
+/* FOOTER (END OF WEBPAGE) */
+
+footer {
+    /* margin-top: 15%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 15px;
+    padding-top: 45px; 
+    background: #171717;
+    align-items: center;
+}
+
+footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -5%;
+    row-gap: 55%;
+    text-align: center;    
+}
+footer a { 
+    color: grey;
+    font-size: x-large;
+}
+
+.us  {
+    font-size: x-large;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: center;
+}
+
+.us p {
+    padding-top: 15px;
+    padding-bottom: 15px;   
+    color: rgb(149, 147, 147);   
+}
+.us span {
+    color: orangered;
+    font-size: large;
+}
+    
+.bottom-nav {   
+    display: none;
+    
+}    
+    /* !THIS ENABLES THE BACKGROUND IMAGES TO AUTO CHANGE */
+@keyframes change {
+    0% {
+        background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(logo.png);
+    }
+    5% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thumbbig-1241240.webp);
+    }
+    10% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(gang-275098.webp);
+    }
+    15% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(conjur-1150742.webp);
+    }
+    20% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(trans-801095.webp);
+    }
+    25% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(kong1143766.webp );
+    }
+    30% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(fast-1028374.webp);
+    }
+    35% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(mortal174854.webp);
+    }
+    40% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(fast-1143080.webp);
+    }
+    45% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thumbbig-1236717.webp);
+    }
+    50% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thor1241167.webp);
+    }
+    55% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thumbbig-1153940.webp);
+    }
+    60% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(rang-913620.webp);
+    }
+    65% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(zilla1135668.webp);
+    }
+    70% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thumbbig-1193919.webp);
+    }
+    75% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(thumbbig-1030996.webp);
+    }
+    80% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(doctor1233729.webp)
+    }
+    85% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(gold.png)
+    }
+    90% {
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(extrac-1072835.webp)
+    }
+}
+
+ @media (min-width: 200px) {
+    /* body {width: 100%;} */
+       .palace ul {
+       margin-top: 10px;       
+            
+    }
+    .main .pan {
+        color: #fff;        
+        /* display: block; */
+    }
+          
+} 
+  
+@media (min-width: 300px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .closebtn{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* body {   
+        width: 100%;
+    } */
+    .img {
+        width: auto;
+        width: 100% !important;
+        background-image: url(marvel-2688068__340.webp);
+        width: 50%;
+        height: 60rem;
+       background-size: cover;
+       background-repeat: no-repeat; 
+       animation: hange 160s infinite  ease-in-out;
+    }
+    nav ul {
+        display: none;
+    }
+    .logo {
+        padding-bottom: 15rem;
+    }
+    .main {
+        top: auto;
+        background-color: transparent;
+    }
+    .main ul {     
+        display: none;
+    }
+    .container .icon .search {
+        justify-content: right;
+    }
+    .main .pan {
+        color: #fff;        
+        display: block;
+          
+    }
+    .text h1{
+        font-size: 2.5rem;
+    }
+    .text p{
+        padding-top: 2%;
+        font-size: 1.4rem;
+    }
+          
+    
+    
+    .palace {
+        background-color: black;
+        height: 6766px;   
+        margin-top: -2%;    
+    }
+    .palace ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 20%;   
+    }
+    .container {
+        top: 80px;
+    }
+    footer {
+        display: none;
+    }
+    .us {
+        font-weight: 500;
+    }
+   
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+    /* body {   
+        width: 100%;
+    } */
+    .main {
+        top: auto;
+        background-color: transparent;
+    }
+    nav ul {
+        padding-left: 35px;
+    }
+    .main ul {
+        display: none;
+    }
+    .palace ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .palace {
+        background-color: black;
+        height: 2900px;   
+        margin-top: -2%;    
+    }  
+        /* .pan {
+        color: #fff;        
+    }
+    .palace {
+        background-color: black;
+        height: 3000px;   
+        margin-top: -2%;       
+} */
+}
+
+@keyframes hange {
+    0% {
+        background-image: url(panter.png);
+    }
+    5% {
+        background-image: url(pider.jpg);
+    }
+    10% {
+        background-image: url(hor.png);
+    }
+     20% {
+        background-image: url(enata.png);
+    }
+   30% {
+        background-image: url(lion.png);
+    }
+   40% {
+        background-image: url(annabell.png);
+    }
+   50% {
+        background-image: url(transs.png);
+    }
+    60% {
+         background-image: url(onwar.png);
+     }
+    65% {
+         background-image: url(life.png);
+     }
+    70% {
+         background-image: url(morbius.png);
+     }
+    80% {
+         background-image: url(sonicccc.png);
+     }
+    85% {
+         background-image: url(moana.png);
+        }
+       90% {
+            background-image: url(conjuring.png);
+        }
+       95% {
+            background-image: url(nightmare.png);
+        }
+       100% {
+            background-image: url(John.png);
+        }
+
+
+
+
+
+         
+    
+}   
